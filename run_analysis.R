@@ -66,3 +66,6 @@ all_bound_melt <- melt(all_bound, id = c("Subject", "Activity"), measure.vars = 
 means <- dcast(all_bound_melt, Subject + Activity ~ variable, mean)
 
 rm(all_bound_melt)
+
+# save tidy data as a text file
+write.table(means, "tidydata.txt", row.names = FALSE)
