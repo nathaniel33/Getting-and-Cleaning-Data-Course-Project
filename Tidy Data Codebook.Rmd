@@ -1,0 +1,26 @@
+---
+title: "Tidy Data Codebook"
+author: "Nathaniel"
+date: "4/16/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This tidy data set has 68 variables.
+
+First is the subject variable, these came from the subject_test and subject_train documents.
+
+Next is the activity, these came from the y_test and y_train documents and the activity names came from the activity document
+
+The remaining variables are the measurements. These came from the X_test and X_train documents. The values have been normalized and bounded within [-1, 1]. The names of these variables came from the features document. The names have been cleaned up just a little bit but substituting things like "time" for "t" and "accelerometer" for "Acc" made for unwieldly wide columns in an already large dataset...
+
+The time measurements, denoted by "t" came from an accelerometer and gyroscope, denoted by "Acc" and "Gyr". The acceleration signals are separated into Body and Gravity. Body linear acceleration and angular velocity were used to calculate Jerk. The magnitude, denoted by "Mag", of these signals were calculated using the Euclidean norm.
+
+A Fast Fourier Transformation was used to calculate frequencies, "f", for some of these measurements.
+
+All measurements were taken in three directions, X, Y and Z.
+
+The means and standard deviations for each feature have been subset and then further the means of these means and standard deviations for each subject-activity have been calculated.
